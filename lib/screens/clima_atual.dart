@@ -75,7 +75,20 @@ class ClimaAtualScreen extends StatelessWidget {
 
           Divider(),
           TituloSecao(titulo: 'Atualização'),
-          ElevatedButton(onPressed: () {}, child: Text('Atualizar')),
+          Center(
+            child: ElevatedButton(onPressed: () {}, child: Text('Atualizar')
+            ),
+          ),
+          SizedBox(height: 16),
+          Container(
+            height: 80,
+            color: Colors.grey.shade200,
+            child: Align(
+              alignment: Alignment.bottomRight,
+              child: Text('Última atualização: 14:30'),
+            ),
+          ),
+          
         ],
       ),
     );

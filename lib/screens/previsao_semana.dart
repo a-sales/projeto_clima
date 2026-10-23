@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_projeto_clima/widgets/titulo_secao.dart';
+// import 'package:flutter_projeto_clima/widgets/titulo_secao.dart';
 
 class PrevisaoSemanaScreen extends StatelessWidget {
   const new({super.key});

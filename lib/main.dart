@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_projeto_clima/widgets/titulo_secao.dart';
+// import 'package:flutter_projeto_clima/widgets/titulo_secao.dart';
 import 'package:flutter_projeto_clima/screens/clima_atual.dart';
 import 'package:flutter_projeto_clima/screens/previsao_semana.dart';
 

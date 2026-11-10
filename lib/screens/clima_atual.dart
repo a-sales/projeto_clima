@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_projeto_clima/widgets/item_detalhe.dart';
 import 'package:flutter_projeto_clima/widgets/titulo_secao.dart';
 
 class ClimaAtualScreen extends StatelessWidget {

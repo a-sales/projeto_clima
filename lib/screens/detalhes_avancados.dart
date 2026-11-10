@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-
-import '../widgets/titulo_secao.dart';
-import 'previsao_semana.dart';
+import 'package:flutter_projeto_clima/models/clima.dart';
+import 'package:flutter_projeto_clima/widgets/titulo_secao.dart';
+import 'package:flutter_projeto_clima/screens/previsao_semana.dart';
 
 class DetalhesAvancadosScreen extends StatelessWidget {
-  const DetalhesAvancadosScreen({super.key});
+  final Clima clima;
+  const DetalhesAvancadosScreen({super.key, required this.clima});
 
   Widget _diaPrevisao(String min, IconData icone, Color cor, String max) {
     return Expanded(
@@ -100,7 +101,7 @@ class DetalhesAvancadosScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => PrevisaoSemanaScreen(),
+                    builder: (context) => PrevisaoSemanaScreen(clima: clima),
                   ),
                 );
               },

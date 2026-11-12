@@ -158,3 +158,39 @@ class CardCidadeResumo extends StatelessWidget {
     );
   }
 }
+
+class CardContador extends StatelessWidget {
+  final int cliques;
+  final VoidCallback onTap;
+
+  const CardContador({super.key, required this.cliques, required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      color: Colors.lightBlue.shade100,
+      child: InkWell(
+        onTap: onTap,
+        child: Padding(
+          padding: EdgeInsets.all(16),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  Icon(Icons.mouse, size: 32),
+                  SizedBox(width: 12),
+                  Text('Cliques realizados', style: TextStyle(fontSize: 16)),
+                ],
+              ),
+              Text(
+                '$cliques',
+                style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

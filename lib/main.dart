@@ -17,13 +17,20 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }
 
-class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  int _cliques = 0;
 
   final List<Clima> cidades = [
     Clima(
@@ -38,10 +45,30 @@ class HomeScreen extends StatelessWidget {
       icone: Icons.wb_sunny,
       imagemUrl: 'https://picsum.photos/id/10/400/300/',
       semana: [
-        PrevisaoDia(dia: 'Sexta', icone: Icons.wb_sunny, min: '18°C', max: '27°C'),
-        PrevisaoDia(dia: 'Sábado', icone: Icons.cloud, min: '17°C', max: '24°C'),
-        PrevisaoDia(dia: 'Domingo', icone: Icons.umbrella, min: '16°C', max: '22°C'),
-        PrevisaoDia(dia: 'Segunda', icone: Icons.wb_sunny, min: '19°C', max: '28°C'),
+        PrevisaoDia(
+          dia: 'Sexta',
+          icone: Icons.wb_sunny,
+          min: '18°C',
+          max: '27°C',
+        ),
+        PrevisaoDia(
+          dia: 'Sábado',
+          icone: Icons.cloud,
+          min: '17°C',
+          max: '24°C',
+        ),
+        PrevisaoDia(
+          dia: 'Domingo',
+          icone: Icons.umbrella,
+          min: '16°C',
+          max: '22°C',
+        ),
+        PrevisaoDia(
+          dia: 'Segunda',
+          icone: Icons.wb_sunny,
+          min: '19°C',
+          max: '28°C',
+        ),
         PrevisaoDia(dia: 'Terça', icone: Icons.cloud, min: '18°C', max: '26°C'),
       ],
     ),
@@ -57,10 +84,30 @@ class HomeScreen extends StatelessWidget {
       icone: Icons.wb_sunny,
       imagemUrl: 'https://picsum.photos/id/1015/400/300/',
       semana: [
-        PrevisaoDia(dia: 'Sexta', icone: Icons.wb_sunny, min: '24°C', max: '35°C'),
-        PrevisaoDia(dia: 'Sábado', icone: Icons.wb_sunny, min: '25°C', max: '36°C'),
-        PrevisaoDia(dia: 'Domingo', icone: Icons.cloud, min: '23°C', max: '33°C'),
-        PrevisaoDia(dia: 'Segunda', icone: Icons.umbrella, min: '22°C', max: '30°C'),
+        PrevisaoDia(
+          dia: 'Sexta',
+          icone: Icons.wb_sunny,
+          min: '24°C',
+          max: '35°C',
+        ),
+        PrevisaoDia(
+          dia: 'Sábado',
+          icone: Icons.wb_sunny,
+          min: '25°C',
+          max: '36°C',
+        ),
+        PrevisaoDia(
+          dia: 'Domingo',
+          icone: Icons.cloud,
+          min: '23°C',
+          max: '33°C',
+        ),
+        PrevisaoDia(
+          dia: 'Segunda',
+          icone: Icons.umbrella,
+          min: '22°C',
+          max: '30°C',
+        ),
         PrevisaoDia(dia: 'Terça', icone: Icons.cloud, min: '23°C', max: '31°C'),
       ],
     ),
@@ -76,11 +123,36 @@ class HomeScreen extends StatelessWidget {
       icone: Icons.umbrella,
       imagemUrl: 'https://picsum.photos/id/1018/400/300/',
       semana: [
-        PrevisaoDia(dia: 'Sexta', icone: Icons.umbrella, min: '12°C', max: '20°C'),
-        PrevisaoDia(dia: 'Sábado', icone: Icons.cloud, min: '11°C', max: '19°C'),
-        PrevisaoDia(dia: 'Domingo', icone: Icons.cloud, min: '10°C', max: '18°C'),
-        PrevisaoDia(dia: 'Segunda', icone: Icons.wb_sunny, min: '11°C', max: '21°C'),
-        PrevisaoDia(dia: 'Terça', icone: Icons.umbrella, min: '13°C', max: '20°C'),
+        PrevisaoDia(
+          dia: 'Sexta',
+          icone: Icons.umbrella,
+          min: '12°C',
+          max: '20°C',
+        ),
+        PrevisaoDia(
+          dia: 'Sábado',
+          icone: Icons.cloud,
+          min: '11°C',
+          max: '19°C',
+        ),
+        PrevisaoDia(
+          dia: 'Domingo',
+          icone: Icons.cloud,
+          min: '10°C',
+          max: '18°C',
+        ),
+        PrevisaoDia(
+          dia: 'Segunda',
+          icone: Icons.wb_sunny,
+          min: '11°C',
+          max: '21°C',
+        ),
+        PrevisaoDia(
+          dia: 'Terça',
+          icone: Icons.umbrella,
+          min: '13°C',
+          max: '20°C',
+        ),
       ],
     ),
     Clima(
@@ -96,13 +168,34 @@ class HomeScreen extends StatelessWidget {
       imagemUrl: 'https://picsum.photos/id/1039/400/300/',
       semana: [
         PrevisaoDia(dia: 'Sexta', icone: Icons.cloud, min: '24°C', max: '31°C'),
-        PrevisaoDia(dia: 'Sábado', icone: Icons.wb_sunny, min: '25°C', max: '32°C'),
-        PrevisaoDia(dia: 'Domingo', icone: Icons.wb_sunny, min: '25°C', max: '32°C'),
-        PrevisaoDia(dia: 'Segunda', icone: Icons.umbrella, min: '24°C', max: '29°C'),
+        PrevisaoDia(
+          dia: 'Sábado',
+          icone: Icons.wb_sunny,
+          min: '25°C',
+          max: '32°C',
+        ),
+        PrevisaoDia(
+          dia: 'Domingo',
+          icone: Icons.wb_sunny,
+          min: '25°C',
+          max: '32°C',
+        ),
+        PrevisaoDia(
+          dia: 'Segunda',
+          icone: Icons.umbrella,
+          min: '24°C',
+          max: '29°C',
+        ),
         PrevisaoDia(dia: 'Terça', icone: Icons.cloud, min: '24°C', max: '30°C'),
       ],
     ),
   ];
+
+  void _registrarClique() {
+    setState(() {
+      _cliques++;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -147,6 +240,8 @@ class HomeScreen extends StatelessWidget {
               chuva: clima.chuva,
               onTap: () => abrirDetalhes(clima),
             ),
+          CardContador(cliques: _cliques, onTap: _registrarClique),
+          SizedBox(height: 16),
         ],
       ),
     );
